@@ -7,7 +7,7 @@ from openpyxl import Workbook
 
 
 
-# Setando a aparencia padrão
+
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
@@ -58,7 +58,7 @@ class App(ctk.CTk):
         
         def submit():
             
-            #Pegando dados dos entrys
+            
             name = name_value.get()
             contact = contact_value.get()
             age = age_value.get()
@@ -88,7 +88,7 @@ class App(ctk.CTk):
 
 
         def clear():
-            #Apagando dados dos entrys
+            
             name_value.set("")
             contact_value.set("")
             age_value.set("")
@@ -98,7 +98,7 @@ class App(ctk.CTk):
 
 
 
-        #Texts Variables
+        
         name_value = StringVar()
         contact_value = StringVar()
         age_value = StringVar()
@@ -106,7 +106,7 @@ class App(ctk.CTk):
         adress_value = StringVar()
         cep_value = StringVar()
 
-        #Entrys
+        
         name_entry = ctk.CTkEntry(self, width=350, textvariable=name_value, font=("Century Gohtic bold", 16), fg_color="transparent")
         contact_entry = ctk.CTkEntry(self, width=200, textvariable=contact_value, font=("Century Gohtic bold", 16), fg_color="transparent")
         email_entry = ctk.CTkEntry(self, width=200, textvariable=email_value, font=("Century Gohtic bold", 16), fg_color="transparent")
@@ -114,16 +114,13 @@ class App(ctk.CTk):
         adress_entry = ctk.CTkEntry(self, width=200, textvariable=adress_value, font=("Century Gohtic bold", 16), fg_color="transparent")
         cep_entry = ctk.CTkEntry(self, width=150, textvariable=cep_value, font=("Century Gohtic bold", 16), fg_color="transparent")
 
-        #ComboBox
+        
         gender_combobox = ctk.CTkComboBox(self, values=["Masculino", "Feminino"], font=("Century Gothic bold", 14), width=170, state="readonly")
         gender_combobox.set("Selecione o gênero",)
         state_combobox = ctk.CTkComboBox(self, values=["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"], font=("Century Gothic bold", 14), width=170, state="readonly")
         state_combobox.set("Selecione o estado")
 
-        #Entry of Obs
-        ##border_width=2, fg_color="transparent")
-
-        #Labels
+        
         lb_name = ctk.CTkLabel(self, text="Nome Completo:", font=("Century Gothic bold", 16), text_color=["#000", "#fff"])
         lb_contact = ctk.CTkLabel(self, text="Contato:", font=("Century Gothic bold", 16), text_color=["#000", "#fff"])
         lb_age = ctk.CTkLabel(self, text="Idade:", font=("Century Gothic bold", 16), text_color=["#000", "#fff"])
